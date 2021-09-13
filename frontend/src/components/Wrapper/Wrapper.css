@@ -1,0 +1,23 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #3F3F40;
+}
+
+.wrapper{
+    align-items: center;
+    text-align: center;
+    min-width: 50vw;
+    min-height: 50vh;
+    outline: auto;
+}
+
+.wrapper > div {
+    font-size: 68px;
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+}
+

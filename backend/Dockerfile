@@ -1,11 +1,9 @@
-FROM node:14-slim
+FROM node:current-bullseye-slim
 
-WORKDIR /opt/src/central-de-avisos/app
+WORKDIR /opt/src/central-de-avisos/app/
 
 COPY package.json /opt/src/central-de-avisos/app/
 
-RUN npm install
-
 COPY . /opt/src/central-de-avisos/app/
 
-CMD ["npm", "start"]
+ENTRYPOINT [ ".docker/entrypoint.sh" ]

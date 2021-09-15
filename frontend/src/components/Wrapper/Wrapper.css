@@ -11,8 +11,19 @@
     text-align: center;
     min-width: 50vw;
     min-height: 50vh;
-    outline: auto;
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: rgba(0, 0, 0, 0.1);
 }
+
+.Logo {
+    display: block;
+    position: static;
+    align-items: center;
+    left: 50%;
+    top: 50%;
+}
+
 
 .wrapper > div {
     font-size: 68px;

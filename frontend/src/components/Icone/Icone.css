@@ -1,0 +1,13 @@
+.Logo {
+    background-image: url(./icone_site.png);
+    background-repeat: no-repeat;
+}
+
+.Centralizar {
+    display: block;
+    object-position: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    width: 50px;
+}

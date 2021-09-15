@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.Footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    background-color: rgba(242, 113, 39, 0.8);
+    text-align: center;
+}
+
+.a {
+    color: #F2F2F2;
+    font-family: 'Open Sans','sans-serif';
+    font-size: 14px;
+    text-decoration-style: none;
+    text-decoration: none;
+    text-align: center;
+}

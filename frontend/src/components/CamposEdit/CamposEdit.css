@@ -1,0 +1,13 @@
+.Campos {
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    max-width: 50vw;
+    max-height: 50vh;
+}
+
+.rotulos {
+    color: #F2F2F2;
+}

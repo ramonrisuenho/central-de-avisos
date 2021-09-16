@@ -13,7 +13,8 @@ export const CamposEdit :React.FunctionComponent<CamposEditProps> = (props) => {
     const previsaoRef = useRef<HTMLInputElement>(null); 
     const onSubmit = (event: FormEvent) => {
         event.preventDefault();
-        console.log(avisoRef.current?.value);
+        avisoRef.current?.value ? console.log(avisoRef.current?.value) : alert("Entrada vazia identificada. O aviso em questão será limpo.")
+        //A previsao pode ser limpa em casos de previsao inderterminada
         console.log(previsaoRef.current?.value);
     }
     

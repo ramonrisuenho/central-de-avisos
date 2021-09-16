@@ -1,6 +1,5 @@
 import React from 'react';
 import Footer from './components/Footer';
-import Icone from './components/Icone';
 import { QuadroEdit } from './components/QuadroEdit';
 import logo from "./components/Icone/icone_site.png";
 import "./components/Wrapper/Wrapper.css";
@@ -12,10 +11,15 @@ import "./components/Wrapper/Wrapper.css";
 function App() {
   //Lógica aqui
   //React Hook
+  function onClickLogo(){
+    alert("Wlan Sistemas - Ligue-se ao novo! \n\n\n by Risuenho 🤓🖖")
+  }
   
   return (
     <div className="container">
-      <img src={logo} height="50px" width="50px" alt="" />
+      <div className="LogoWrapper">
+            <img src={logo} className="Logo" alt="Logo" onClick={onClickLogo} />
+          </div>
       <div className="container">
         <div className="wrapper">
           <div>

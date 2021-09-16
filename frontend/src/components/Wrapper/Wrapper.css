@@ -6,7 +6,9 @@
     background-color: #3F3F40;
 }
 
-.wrapper{
+
+.wrapper {
+    position: relative;
     align-items: center;
     text-align: center;
     min-width: 50vw;
@@ -16,12 +18,42 @@
     outline-color: rgba(0, 0, 0, 0.1);
 }
 
+
+.LogoWrapper {
+    position: absolute;
+    z-index: 10;
+    top: 46%;
+    left: 48.5%;
+}
+
+@keyframes logo-animation {
+    0% 
+    {
+        top: 46%;
+        left: 48.5%;
+    } 
+    50%
+    {
+        top: 46.5%;
+        left: 49%;
+    }
+    100%
+    {
+        top: 46%;
+        left: 48.5%;
+    }
+    
+}
+
 .Logo {
-    display: block;
-    position: static;
-    align-items: center;
-    left: 50%;
-    top: 50%;
+    height: 80px;
+    width: 80px;
+}
+
+.LogoWrapper:hover{
+    cursor: pointer;
+    animation: logo-animation 0.5s;
+    animation-timing-function: ease-in-out;
 }
 
 

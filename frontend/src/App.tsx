@@ -1,47 +1,38 @@
 import React from 'react';
-import Footer from './components/Footer';
-import { QuadroEdit } from './components/QuadroEdit';
-import logo from "./components/Icone/icone_site.png";
+import "./App.css"
+import { AvisosDisplay } from "./components/AvisosDisplay";
+import { AvisosEdit } from "./components/AvisosEdit";
+import { QuadroEdit } from "./components/QuadroEdit";
+import { Switch, Route, Link } from "react-router-dom";
+import { RouteChildrenProps } from 'react-router';
+import "./components/Footer";
+import "./components/Icone";
 import "./components/Wrapper/Wrapper.css";
+import routes from './config/routes';
 
+export interface IAppProps {}
 
-
-
-
-function App() {
+const App: React.FunctionComponent<IAppProps> = (props) => {
   //Lógica aqui
   //React Hook
-  function onClickLogo(){
-    alert("Wlan Sistemas - Ligue-se ao novo! \n\n\n by Risuenho 🤓🖖")
-  }
   
   return (
-    <div className="container">
-      <div className="LogoWrapper">
-            <img src={logo} className="Logo" alt="Logo" onClick={onClickLogo} />
-          </div>
-      <div className="container">
-        <div className="wrapper">
-          <div>
-            <QuadroEdit aviso="Aviso 1" previsao="Previsão 1"></QuadroEdit>
-          </div>
-        </div>
-        <div className="wrapper">
-          <div>
-            <QuadroEdit aviso="Aviso 2" previsao="Previsão 2"></QuadroEdit>
-          </div>
-        </div>
-        <div className="wrapper">
-          <div>
-            <QuadroEdit aviso="Aviso 3" previsao="Previsão 3"></QuadroEdit>
-          </div>
-        </div>
-        <div className="wrapper">
-          <div>
-            <QuadroEdit aviso="Aviso 4" previsao="Previsão 4"></QuadroEdit>
-          </div>
-        </div>
-        <Footer />
+    <div className="App">
+      <div>
+      </div>
+      <div>
+        <Switch>
+          {routes.map((route, index) => {
+            return (
+              <Route
+                key={index}
+                exact={route.exact}
+                path={route.path}
+                render={(routeProps: RouteChildrenProps<any>) => <route.component {...routeProps} /> }
+                />
+            )
+          })}
+        </Switch>
       </div>
     </div>
   );

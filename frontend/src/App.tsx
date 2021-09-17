@@ -1,9 +1,6 @@
 import React from 'react';
 import "./App.css"
-import { AvisosDisplay } from "./components/AvisosDisplay";
-import { AvisosEdit } from "./components/AvisosEdit";
-import { QuadroEdit } from "./components/QuadroEdit";
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import { RouteChildrenProps } from 'react-router';
 import "./components/Footer";
 import "./components/Icone";
@@ -15,7 +12,6 @@ export interface IAppProps {}
 const App: React.FunctionComponent<IAppProps> = (props) => {
   //Lógica aqui
   //React Hook
-  
   return (
     <div className="App">
       <div>
@@ -29,16 +25,13 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
                 exact={route.exact}
                 path={route.path}
                 render={(routeProps: RouteChildrenProps<any>) => <route.component {...routeProps} /> }
-                />
+              />
             )
           })}
         </Switch>
       </div>
     </div>
   );
-
-
-
 }
 
 export default App;

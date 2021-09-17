@@ -19,26 +19,26 @@ export const AvisosEdit: React.FunctionComponent<AvisosEditProps> = (props) => {
     <div className="container">
       <div className="LogoWrapper">
             <img src={logo} className="Logo" alt="Logo" onClick={onClickLogo} />
-          </div>
+      </div>
       <div className="container">
         <div className="wrapper">
           <div>
-            <QuadroEdit aviso="Aviso 1" previsao="Previsão 1"></QuadroEdit>
+            <QuadroEdit aviso="Aviso 1" previsao="Previsão 1" />
           </div>
         </div>
         <div className="wrapper">
           <div>
-            <QuadroEdit aviso="Aviso 2" previsao="Previsão 2"></QuadroEdit>
+            <QuadroEdit aviso="Aviso 2" previsao="Previsão 2" />
           </div>
         </div>
         <div className="wrapper">
           <div>
-            <QuadroEdit aviso="Aviso 3" previsao="Previsão 3"></QuadroEdit>
+            <QuadroEdit aviso="Aviso 3" previsao="Previsão 3" />
           </div>
         </div>
         <div className="wrapper">
           <div>
-            <QuadroEdit aviso="Aviso 4" previsao="Previsão 4"></QuadroEdit>
+            <QuadroEdit aviso="Aviso 4" previsao="Previsão 4" />
           </div>
         </div>
         <Footer />

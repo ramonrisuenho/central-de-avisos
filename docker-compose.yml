@@ -2,7 +2,6 @@ version: "3"
 services:
   frontend-central:
     image: frontend-central
-    stdin_open: true
     ports:
       - "3000:3000"
   backend-central:

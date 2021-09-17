@@ -11,7 +11,7 @@ app.use(express.json());
 //Definindo as rotas padrões para a utilização do app
 app.use("/api/v1/controle-avisos", avisosRoutes);
 //Definindo uma wildcard para qualquer rota não reconhecida pelo servidor
-app.use("*", (req, res) => res.statu(400).json({error: "not found"}));
+app.use("*", (req, res) => res.status(400).json({error: "not found"}));
 
 
 //Exportando o app como um módulo que possa ser importado
